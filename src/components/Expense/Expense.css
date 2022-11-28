@@ -30,9 +30,20 @@
   font-weight: bold;
   color: white;
   background-color: #40005d;
-  border: 1px solid white;
   padding: 0.5rem;
   border-radius: 12px;
+}
+
+.expense-item__delete {
+  color: white;
+  background-color: rgb(207, 62, 62);
+  padding: 0.5rem;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+.expense-item__delete:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 580px) {

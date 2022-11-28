@@ -6,16 +6,15 @@ const ExpenseList = (props) => {
   expenses = expenses.sort((expense_1, expense_2) => {
     return new Date(expense_2.date) - new Date(expense_1.date);
   });
-  console.log(expenses);
 
   const noExpenses = (
-    <p className="expenses-list__fallback">No expenses found for this year!</p>
+    <p className="expenses-list__fallback">No expenses found. Add some! </p>
   );
 
   const haveExpenses = (
     <ul className="expenses-list">
       {expenses.map((expense) => (
-        <Expense key={expense.id} {...expense} />
+        <Expense key={expense.id} {...expense} onDeleteExpense={props.onDeleteExpense} />
       ))}
     </ul>
   );
