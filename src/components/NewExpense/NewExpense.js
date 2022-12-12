@@ -24,6 +24,7 @@ const NewExpense = (props) => {
         <ExpenseForm
           onAddExpense={addExpenseHandler}
           toggleDisplay={changeDisplayMode}
+          onInvalidInput={props.onInvalidInput}
         />
       )}
       {!newExpenseFormActive && defaultDisplay}

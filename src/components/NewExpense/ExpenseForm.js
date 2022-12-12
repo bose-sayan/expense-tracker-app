@@ -5,7 +5,7 @@ const ExpenseForm = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
     if (!enteredTitle || !enteredAmount || !enteredDate) {
-      alert("Invalid data!");
+      props.onInvalidInput();
       return;
     }
     const newExpenseData = {
